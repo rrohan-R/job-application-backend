@@ -1,6 +1,7 @@
 package com.project.JobApplication.controller;
 
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpClientErrorException;
@@ -12,7 +13,11 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class AiChatBotController {
 
     private static final String WOLFRAM_API_BASE = "https://api.wolframalpha.com/v1/spoken";
-    private static final String APP_ID = "XJE94L-Q9LGGAJVLJ";
+    private final String APP_ID;
+
+    public AiChatBotController(@Value("${api.secret}") String appId) {
+        this.APP_ID = appId;
+    }
 
     @GetMapping
     public ResponseEntity<String> askWolfram(@RequestParam String question) {
