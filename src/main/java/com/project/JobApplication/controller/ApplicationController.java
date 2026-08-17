@@ -19,7 +19,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @RestController
-@CrossOrigin(origins = "https://job-application-frontend-delta.vercel.app/")
+@CrossOrigin(origins = "https://job-application-frontend-delta.vercel.app")
 public class ApplicationController {
 
     @Autowired

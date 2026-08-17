@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = "https://job-application-frontend-delta.vercel.app/")
+@CrossOrigin(origins = "https://job-application-frontend-delta.vercel.app")
 @RestController
 public class JobsController {
 
