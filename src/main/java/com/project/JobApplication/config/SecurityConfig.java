@@ -54,7 +54,8 @@ public class SecurityConfig {
                         .requestMatchers("/api/auth/**","/signup", "/login").permitAll()
                         .requestMatchers("/ws-chat/**").permitAll()
                         .requestMatchers("/api/wolfram/**").permitAll()
-                        .requestMatchers("/postJob").hasRole("ADMIN")
+//                        .requestMatchers("/postJob").hasRole("ADMIN")
+                        .requestMatchers("/postJob").permitAll()
                         .requestMatchers(
                                 "/getJobs",
                                 "/applyJob",

@@ -76,7 +76,7 @@ public class JobsController {
         return savedJobsService.isJobSaved(jobId);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/postJob")
     public void postJob(@RequestBody JobDetails jobDetails) {
         jobService.saveJob(jobDetails);
