@@ -32,7 +32,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
         String path = request.getRequestURI();
 
-        if (path.startsWith("/ws-chat") || path.startsWith("/sockjs") || path.startsWith("/api/wolfram")) {
+        if (path.startsWith("/ws-chat") || path.startsWith("/sockjs") || path.startsWith("/api/gemini")) {
             filterChain.doFilter(request, response);
             return;
         }

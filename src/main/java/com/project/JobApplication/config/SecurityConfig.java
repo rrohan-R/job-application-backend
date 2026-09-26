@@ -53,7 +53,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/**","/signup", "/login").permitAll()
                         .requestMatchers("/ws-chat/**").permitAll()
-                        .requestMatchers("/api/wolfram/**").permitAll()
+                        .requestMatchers("/api/gemini/**").permitAll()
 //                        .requestMatchers("/postJob").hasRole("ADMIN")
                         .requestMatchers("/postJob").permitAll()
                         .requestMatchers(
